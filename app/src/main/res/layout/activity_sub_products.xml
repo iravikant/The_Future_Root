@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Sub_productsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/vector__16_"
+        app:title="Home care"
+        app:titleCentered="true"
+        app:titleTextColor="#374151" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Home care products"
+                    android:textColor="#272727"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="#F0F0F0"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#FFFAF5"
+                        android:text="skin care"
+                        android:textColor="#C28C7E"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:cornerRadius="30dp"
+                        app:strokeColor="#C28C7E"
+                        app:strokeWidth="2dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="oral care"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:cornerRadius="30dp"
+                        app:strokeColor="#AFAFAF"
+                        app:strokeWidth="2dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="baby care"
+                        android:textColor="#AFAFAF"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:cornerRadius="30dp"
+                        app:strokeColor="#C28C7E" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/topic_item_2" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
